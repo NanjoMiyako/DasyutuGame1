@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+<title>脱出ゲームテスト</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<script src="jquery-3.3.1.min.js"></script>
+<div class="adbox1">
+</div>
+
+<div id="GameGamen">
+<hr>
+ファイルのインポート<br>
+<input type="file" id="importFile_file"><br>
+脱出ゲームデータ:<span id="GameDataImportFlgSpan"></span><br>
+<button type="button" id="GameDataImportButton" style="margin-top:10px;" onclick="ImportGameData()">
+ゲームデータをロード
+</button><br>
+<button type="button" id="GoToStartButton" style="margin-top:10px;" onclick="GoToStart()">
+最初のページに戻る
+</button><br>
+<button type="button" id="ItemButton" style="margin-top:10px;" onclick="ShowItemDiv()">
+アイテム一覧を表示
+</button><br>
+<button type="button" id="ItemMixButton" style="margin-top:10px;" onclick="ShowItemMixDiv()">
+アイテムを合成
+</button><br>
+<hr>
+<div id="GameTab">
+現在のページID:<span id="CurrentPageID"></span><br>
+ページを変更(ページID):
+<input type="text" name="GamePageTextBox" id="GamePageIDTextBox">
+<button type="button" name="JumpPage" value="" onclick="JumpPage()" style="margin-left:10px; margin-top:10px;">ジャンプ</button>
+<br>
+
+<img id="GameImg" border="1" src="" width="200" height="200" alt="Image1" title="Image1"><br>
+<span id="GameComment"></span><br>
+<div id="PassWordInput">
+パスワード:
+<input type="text" name="GamePasswordTextBox" id="GamePasswordTextBox"><br>
+<button type="button" name="InputPasswordBtn" value="" onclick="InputPassword()" style="margin-left:10px; margin-top:10px;">パスワード入力</button>
+<br>
+</div>
+<div id="ToolIDInput">
+使用道具ID:
+<input type="text" name="ToolIDInUseToolPage" id="ToolIDInUseToolPage"><br>
+<button type="button" name="InputToolIdBtn" value="" onclick="InputToolId()" style="margin-left:10px; margin-top:10px;">道具ID入力</button>
+<br>
+</div>
+<div id="ChooseLinkTab">
+選択肢一覧:<br>
+<input onclick="ChooseLink1()" style="margin-left:10px; margin-top:10px;" type="button" value="選択肢1" id="ChooseLink1"></input><br>
+<input onclick="ChooseLink2()" style="margin-left:10px; margin-top:10px;" type="button" value="選択肢2" id="ChooseLink2"></input><br>
+<input onclick="ChooseLink3()" style="margin-left:10px; margin-top:10px;" type="button" value="選択肢3" id="ChooseLink3"></input><br>
+</div>
+
+</div>
+
+<div id="ItemTab">
+<hr>
+道具ID:
+<input type="text" name="ItemIDTextBoxOnItemTab" id="ItemIDTextBoxOnItemTab">
+<button type="button" name="SearchOnItemTab" value="" onclick="SearchItem()" style="margin-left:10px; margin-top:10px;">アイテム検索</button>
+<br>
+道具名:
+<span id="ToolName"></span><br>
+<img id="ToolImg" border="1" src="" width="200" height="200" alt="Image1" title="toolImg1"><br>
+<span id="ToolComment"></span><br>
+
+</div>
+
+<div id="ItemMixTab">
+<hr>
+道具ID1:
+<input type="text" name="ItemID1TextBoxOnItemMixTab" id="ItemID1TextBoxOnItemMixTab"><br>
+道具ID2:
+<input type="text" name="ItemID2TextBoxOnItemMixTab" id="ItemID2TextBoxOnItemMixTab"><br>
+<button type="button" name="MixItemOnItemMixTab" value="" onclick="MixItem()" style="margin-left:10px; margin-top:10px;">アイテム合成</button>
+<br>
+<span id="MixResultComment"></span><br>
+</div>
+
+
+<div class="adbox1">
+</div>
+
+<div id="InitScriptTag"></div>
+<script type="text/javascript" src="DasyutuGameJS.js" async defer>
+</script>
+
+</body>
+</html>
